@@ -38,16 +38,19 @@ import hashlib
 from datetime import datetime, timezone, timedelta
 from typing import List, Optional, Dict, Any
 
-# Suppress SSL warnings for corporate certificates
-import urllib3
-urllib3.disable_warnings()
+# SSL verification is enabled by default for security
+# If you need to disable SSL verification for corporate certificates,
+# set EXCHANGE_DISABLE_SSL_VERIFY=1 environment variable
+if os.environ.get('EXCHANGE_DISABLE_SSL_VERIFY') == '1':
+    import urllib3
+    urllib3.disable_warnings()
 
 # Load .env file from script directory
 def load_env_file():
     """Load environment variables from .env file in script directory."""
     import os
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    env_path = os.path.join(os.path.dirname(script_dir), '.env')
+    env_path = os.path.join(script_dir, '.env')
     if os.path.exists(env_path):
         with open(env_path, 'r') as f:
             for line in f:

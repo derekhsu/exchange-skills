@@ -1,6 +1,17 @@
 ---
 name: exchange-skills
 description: "Full email, calendar, contacts, tasks, and notes management for Microsoft Exchange/Outlook. Use when Claude needs to list unread emails, read email content, reply to emails, mark emails as read, archive emails, view calendar events, search contacts, manage tasks, or access notes. Supports batch operations for external/internal emails. Triggers: check my email, unread emails, reply to email, archive external emails, mark as read, calendar, schedule, 行程, contacts, tasks, notes."
+metadata:
+  openclaw:
+    requires:
+      env:
+        - EXCHANGE_SERVER
+        - EXCHANGE_EMAIL
+        - EXCHANGE_USERNAME
+        - EXCHANGE_PASSWORD
+      optional_env:
+        - EXCHANGE_DOMAIN
+    primaryEnv: EXCHANGE_PASSWORD
 ---
 
 # Exchange Mail
@@ -98,6 +109,14 @@ export EXCHANGE_EMAIL="user@company.com"
 export EXCHANGE_USERNAME="username"
 export EXCHANGE_PASSWORD="password"
 ```
+
+Optional:
+```bash
+export EXCHANGE_DOMAIN="domain"  # Windows domain if required
+export EXCHANGE_DISABLE_SSL_VERIFY=1  # Only if you need to disable SSL verification
+```
+
+**Note**: The script will also load environment variables from a `.env` file in the script directory (`skills/exchange-skills/scripts/.env`) if it exists.
 
 ## Workflow Examples
 
