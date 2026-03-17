@@ -1,6 +1,6 @@
 ---
-name: exchange-mail
-description: "Full email and calendar management for Microsoft Exchange/Outlook. Use when Claude needs to list unread emails, read email content, reply to emails, mark emails as read, archive emails, or view calendar events. Supports batch operations for external/internal emails. Triggers: check my email, unread emails, reply to email, archive external emails, mark as read, calendar, schedule, 行程."
+name: exchange-skills
+description: "Full email, calendar, contacts, tasks, and notes management for Microsoft Exchange/Outlook. Use when Claude needs to list unread emails, read email content, reply to emails, mark emails as read, archive emails, view calendar events, search contacts, manage tasks, or access notes. Supports batch operations for external/internal emails. Triggers: check my email, unread emails, reply to email, archive external emails, mark as read, calendar, schedule, 行程, contacts, tasks, notes."
 ---
 
 # Exchange Mail
