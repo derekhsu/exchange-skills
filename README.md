@@ -3,6 +3,8 @@
 This repository contains the `exchange-mail` skill for agentic AI systems, enabling full email and calendar management for Microsoft Exchange/Outlook.
 
 ## Overview
+This skill is inspired by and references the work in https://github.com/DmitryBMsk/claude-code-codex-exchange-skill
+
 
 The `exchange-mail` skill allows AI agents to interact with Microsoft Exchange/Outlook through a command-line interface, providing capabilities such as:
 
