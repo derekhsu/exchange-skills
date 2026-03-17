@@ -80,8 +80,10 @@ def get_account():
         print("Run: pip install exchangelib", file=sys.stderr)
         sys.exit(1)
 
-    # Disable SSL verification for corporate certificates
-    BaseProtocol.HTTP_ADAPTER_CLS = NoVerifyHTTPAdapter
+    # SSL verification is enabled by default for security
+    # Only disable if explicitly requested via environment variable
+    if os.environ.get('EXCHANGE_DISABLE_SSL_VERIFY') == '1':
+        BaseProtocol.HTTP_ADAPTER_CLS = NoVerifyHTTPAdapter
 
     # Get credentials from environment
     server = os.environ.get('EXCHANGE_SERVER')

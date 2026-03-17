@@ -113,7 +113,7 @@ export EXCHANGE_PASSWORD="password"
 Optional:
 ```bash
 export EXCHANGE_DOMAIN="domain"  # Windows domain if required
-export EXCHANGE_DISABLE_SSL_VERIFY=1  # Only if you need to disable SSL verification
+export EXCHANGE_DISABLE_SSL_VERIFY=1  # Only if you need to disable SSL verification (not recommended)
 ```
 
 **Note**: The script will also load environment variables from a `.env` file in the script directory (`skills/exchange-skills/scripts/.env`) if it exists.
