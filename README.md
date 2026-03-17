@@ -68,39 +68,15 @@ This skill activates when users make requests like:
 - "schedule"
 - "行程" (Chinese for schedule)
 
-## Publishing to skills.sh
+## Installation
 
-This skill is automatically indexed by [skills.sh](https://skills.sh) when users install it via:
-
-```bash
-npx skills add derekhsu/exchange-skills
-```
-
-No manual submission is required! Skills.sh automatically:
-- Scans public GitHub repositories for SKILL.md files
-- Indexes skills when they're installed via `npx skills add`
-- Tracks usage statistics and popularity
-
-To verify your skill appears on skills.sh, you can:
-1. Visit [skills.sh](https://skills.sh)
-2. Search for "exchange-mail" or "exchange-skills"
-3. Check the skill's installation count and popularity
-
-## Installation for Users
-
-Users can install this skill in any compatible AI agent:
+Install this skill using the skills CLI:
 
 ```bash
 npx skills add derekhsu/exchange-skills
 ```
 
-Or for a specific skill in a multi-skill repository:
-
-```bash
-npx skills add derekhsu/exchange-skills --skill exchange-mail
-```
-
-Compatible with 18+ AI agents including Claude Code, GitHub Copilot, Cursor, Cline, and many others.
+This skill works with 18+ AI agents including Claude Code, GitHub Copilot, Cursor, Cline, and many others.
 
 ---
 *Last updated: $(date)*
